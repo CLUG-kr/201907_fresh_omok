@@ -35,7 +35,7 @@ int main()
 			now = GetTickCount();
 			do {
 				printf("검은색 좌표는? (시간제한 %d초) ->",limit);
-				scanf("%d,%d", &x, &y);
+				scanf("%d %d", &x, &y);
 
 				if (x >= N || y >= N || x < 1 || y < 1)
 				{
@@ -54,7 +54,7 @@ int main()
 					break;
 			} while (1);
 						
-			putStone(x+1, y+1, BLACK); //흑돌 좌표를 받아 돌을 놓는다.
+			putStone(x, y, BLACK); //흑돌 좌표를 받아 돌을 놓는다.
 			calculate(board_cal, board, BLACK, x, y, &ai_x, &ai_y); //
 
 			if (blackwinTest() == 1)//승리자가 나왔는지 확인
@@ -65,9 +65,8 @@ int main()
 
 			printf("흰색 계산중...\n");
 			
-			printf("%d %d", ai_x, ai_y);
 			putStone(ai_x, ai_y, WHITE);//그 좌표에 돌을 놓는다.
-			calculate(board_cal, board, WHITE, x, y, &ai_x, &ai_y);
+			calculate(board_cal, board, WHITE, ai_x, ai_y, &ai_x, &ai_y);
 
 			if (whitewinTest() == 1)//승리자가 나왔는지 체크.
 			{
@@ -79,13 +78,13 @@ int main()
 	else if (whichplayer == 2)
 	{
 		putStone(10, 10, BLACK);//컴퓨터가 검은색으로 시작
-		calculate(board_cal, board, BLACK, x, y, &ai_x, &ai_y);
+		calculate(board_cal, board, BLACK, 10, 10, &ai_x, &ai_y);
 
 		while (1) {
 			now = GetTickCount();
 			do {
 				printf("흰색 좌표는? (시간제한 %d초) ->",limit);
-				scanf("%d,%d", &x, &y);
+				scanf("%d %d", &x, &y);
 
 				if (x >= N || y >= N || x < 1 || y < 1)
 				{
@@ -107,10 +106,16 @@ int main()
 			putStone(x, y, WHITE);
 			calculate(board_cal, board, WHITE, x, y, &ai_x, &ai_y);
 			
+			if (whitewinTest() == 1)//승리자가 나왔는지 체크.
+			{
+				printf("black wins\n");
+				break;
+			}
+
 			printf("검은색 계산중...\n");
 
 			putStone(ai_x, ai_y, BLACK);//그 좌표에 돌을 놓는다.
-			calculate(board_cal, board, BLACK, x, y, &ai_x, &ai_y);
+			calculate(board_cal, board, BLACK, ai_x, ai_y, &ai_x, &ai_y);
 			
 			if (blackwinTest() == 1)//승리자가 나왔는지 체크.
 			{

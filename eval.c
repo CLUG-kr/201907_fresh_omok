@@ -13,179 +13,179 @@ void eval(int(*board_cal)[N], int(*board)[N]) // 해당 노드가 가지고 있는 board의
 		for (j = 4; j < N - 4; j++) {
 			//●v●●●
 			if (board[i][j] == 3 && board[i + 1][j] == 0 && board[i + 2][j] == 3 && board[i + 3][j] == 3 && board[i + 4][j] == 3)
-				board_cal[i + 1][j] = board_cal[i + 1][j] + 100;
+				board_cal[i + 1][j] = board_cal[i + 1][j] + 10;
 			if (board[i][j] == 3 && board[i][j + 1] == 0 && board[i][j + 2] == 3 && board[i][j + 3] == 3 && board[i][j + 4] == 3)
-				board_cal[i][j + 1] = board_cal[i][j + 1] + 100;
+				board_cal[i][j + 1] = board_cal[i][j + 1] + 10;
 			if (board[i][j] == 3 && board[i + 1][j + 1] == 0 && board[i + 2][j + 2] == 3 && board[i + 3][j + 3] == 3 && board[i + 4][j + 4] == 3)
-				board_cal[i + 1][j + 1] = board_cal[i + 1][j + 1] + 100;
+				board_cal[i + 1][j + 1] = board_cal[i + 1][j + 1] + 10;
 			if (board[i][j] == 3 && board[i + 1][j - 1] == 0 && board[i + 2][j - 2] == 3 && board[i + 3][j - 3] == 3 && board[i + 4][j - 4] == 3)
-				board_cal[i + 1][j - 1] = board_cal[i + 1][j - 1] + 100;
+				board_cal[i + 1][j - 1] = board_cal[i + 1][j - 1] + 10;
 			if (board[i][j] == 3 && board[i - 1][j] == 0 && board[i - 2][j] == 3 && board[i - 3][j] == 3 && board[i - 4][j] == 3)
-				board_cal[i - 1][j] = board_cal[i - 1][j] + 100;
+				board_cal[i - 1][j] = board_cal[i - 1][j] + 10;
 			if (board[i][j] == 3 && board[i][j - 1] == 0 && board[i][j - 2] == 3 && board[i][j - 3] == 3 && board[i][j - 4] == 3)
-				board_cal[i][j - 1] = board_cal[i][j - 1] + 100;
+				board_cal[i][j - 1] = board_cal[i][j - 1] + 10;
 			if (board[i][j] == 3 && board[i - 1][j - 1] == 0 && board[i - 2][j - 2] == 3 && board[i - 3][j - 3] == 3 && board[i - 4][j - 4] == 3)
-				board_cal[i - 1][j - 1] = board_cal[i - 1][j - 1] + 100;
+				board_cal[i - 1][j - 1] = board_cal[i - 1][j - 1] + 10;
 			if (board[i][j] == 3 && board[i - 1][j + 1] == 0 && board[i - 2][j + 2] == 3 && board[i - 3][j + 3] == 3 && board[i - 4][j + 4] == 3)
-				board_cal[i - 1][j + 1] = board_cal[i - 1][j + 1] + 100;
+				board_cal[i - 1][j + 1] = board_cal[i - 1][j + 1] + 10;
 
 			//for black
 			if (board[i][j] == 2 && board[i + 1][j] == 0 && board[i + 2][j] == 2 && board[i + 3][j] == 2 && board[i + 4][j] == 2)
-				board_cal[i + 1][j] = board_cal[i + 1][j] - 100;
+				board_cal[i + 1][j] = board_cal[i + 1][j] - 10;
 			if (board[i][j] == 2 && board[i][j + 1] == 0 && board[i][j + 2] == 2 && board[i][j + 3] == 2 && board[i][j + 4] == 2)
-				board_cal[i][j + 1] = board_cal[i][j + 1] - 100;
+				board_cal[i][j + 1] = board_cal[i][j + 1] - 10;
 			if (board[i][j] == 2 && board[i + 1][j + 1] == 0 && board[i + 2][j + 2] == 2 && board[i + 3][j + 3] == 2 && board[i + 4][j + 4] == 2)
-				board_cal[i + 1][j + 1] = board_cal[i + 1][j + 1] - 100;
+				board_cal[i + 1][j + 1] = board_cal[i + 1][j + 1] - 10;
 			if (board[i][j] == 2 && board[i + 1][j - 1] == 0 && board[i + 2][j - 2] == 2 && board[i + 3][j - 3] == 2 && board[i + 4][j - 4] == 2)
-				board_cal[i + 1][j - 1] = board_cal[i + 1][j - 1] - 100;
+				board_cal[i + 1][j - 1] = board_cal[i + 1][j - 1] - 10;
 			if (board[i][j] == 2 && board[i - 1][j] == 0 && board[i - 2][j] == 2 && board[i - 3][j] == 2 && board[i - 4][j] == 2)
-				board_cal[i - 1][j] = board_cal[i - 1][j] - 100;
+				board_cal[i - 1][j] = board_cal[i - 1][j] - 10;
 			if (board[i][j] == 2 && board[i][j - 1] == 0 && board[i][j - 2] == 2 && board[i][j - 3] == 2 && board[i][j - 4] == 2)
-				board_cal[i][j - 1] = board_cal[i][j - 1] - 100;
+				board_cal[i][j - 1] = board_cal[i][j - 1] - 10;
 			if (board[i][j] == 2 && board[i - 1][j - 1] == 0 && board[i - 2][j - 2] == 2 && board[i - 3][j - 3] == 2 && board[i - 4][j - 4] == 2)
-				board_cal[i - 1][j - 1] = board_cal[i - 1][j - 1] - 100;
+				board_cal[i - 1][j - 1] = board_cal[i - 1][j - 1] - 10;
 			if (board[i][j] == 2 && board[i - 1][j + 1] == 0 && board[i - 2][j + 2] == 2 && board[i - 3][j + 3] == 2 && board[i - 4][j + 4] == 2)
-				board_cal[i - 1][j + 1] = board_cal[i - 1][j + 1] - 100;
+				board_cal[i - 1][j + 1] = board_cal[i - 1][j + 1] - 10;
 
 			//●v●●● //뒤집힌 경우
 			if (board[i][j] == 3 && board[i + 1][j] == 3 && board[i + 2][j] == 3 && board[i + 3][j] == 0 && board[i + 4][j] == 3)
-				board_cal[i + 3][j] = board_cal[i + 3][j] + 100;
+				board_cal[i + 3][j] = board_cal[i + 3][j] + 10;
 			if (board[i][j] == 3 && board[i][j + 1] == 3 && board[i][j + 2] == 3 && board[i][j + 3] == 0 && board[i][j + 4] == 3)
-				board_cal[i][j + 3] = board_cal[i][j + 3] + 100;
+				board_cal[i][j + 3] = board_cal[i][j + 3] + 10;
 			if (board[i][j] == 3 && board[i + 1][j + 1] == 3 && board[i + 2][j + 2] == 3 && board[i + 3][j + 3] == 0 && board[i + 4][j + 4] == 3)
-				board_cal[i + 3][j + 3] = board_cal[i + 3][j + 3] + 100;
+				board_cal[i + 3][j + 3] = board_cal[i + 3][j + 3] + 10;
 			if (board[i][j] == 3 && board[i + 1][j - 1] == 3 && board[i + 2][j - 2] == 3 && board[i + 3][j - 3] == 0 && board[i + 4][j - 4] == 3)
-				board_cal[i + 3][j - 3] = board_cal[i + 3][j - 3] + 100;
+				board_cal[i + 3][j - 3] = board_cal[i + 3][j - 3] + 10;
 			if (board[i][j] == 3 && board[i - 1][j] == 3 && board[i - 2][j] == 3 && board[i - 3][j] == 0 && board[i - 4][j] == 3)
-				board_cal[i - 3][j] = board_cal[i - 3][j] + 100;
+				board_cal[i - 3][j] = board_cal[i - 3][j] + 10;
 			if (board[i][j] == 3 && board[i][j - 1] == 3 && board[i][j - 2] == 3 && board[i][j - 3] == 0 && board[i][j - 4] == 3)
-				board_cal[i][j - 3] = board_cal[i][j - 3] + 100;
+				board_cal[i][j - 3] = board_cal[i][j - 3] + 10;
 			if (board[i][j] == 3 && board[i - 1][j - 1] == 3 && board[i - 2][j - 2] == 3 && board[i - 3][j - 3] == 0 && board[i - 4][j - 4] == 3)
-				board_cal[i - 3][j - 3] = board_cal[i - 3][j - 3] + 100;
+				board_cal[i - 3][j - 3] = board_cal[i - 3][j - 3] + 10;
 			if (board[i][j] == 3 && board[i - 1][j + 1] == 3 && board[i - 2][j + 2] == 3 && board[i - 3][j + 3] == 0 && board[i - 4][j + 4] == 3)
-				board_cal[i - 3][j + 3] = board_cal[i - 3][j + 3] + 100;
+				board_cal[i - 3][j + 3] = board_cal[i - 3][j + 3] + 10;
 
 			//for black
 			if (board[i][j] == 2 && board[i + 1][j] == 2 && board[i + 2][j] == 2 && board[i + 3][j] == 0 && board[i + 4][j] == 2)
-				board_cal[i + 3][j] = board_cal[i + 3][j] - 100;
+				board_cal[i + 3][j] = board_cal[i + 3][j] - 10;
 			if (board[i][j] == 2 && board[i][j + 1] == 2 && board[i][j + 2] == 2 && board[i][j + 3] == 0 && board[i][j + 4] == 2)
-				board_cal[i][j + 3] = board_cal[i][j + 3] - 100;
+				board_cal[i][j + 3] = board_cal[i][j + 3] - 10;
 			if (board[i][j] == 2 && board[i + 1][j + 1] == 2 && board[i + 2][j + 2] == 2 && board[i + 3][j + 3] == 0 && board[i + 4][j + 4] == 2)
-				board_cal[i + 3][j + 3] = board_cal[i + 3][j + 3] - 100;
+				board_cal[i + 3][j + 3] = board_cal[i + 3][j + 3] - 10;
 			if (board[i][j] == 2 && board[i + 1][j - 1] == 2 && board[i + 2][j - 2] == 2 && board[i + 3][j - 3] == 0 && board[i + 4][j - 4] == 2)
-				board_cal[i + 3][j - 3] = board_cal[i + 3][j - 3] - 100;
+				board_cal[i + 3][j - 3] = board_cal[i + 3][j - 3] - 10;
 			if (board[i][j] == 2 && board[i - 1][j] == 2 && board[i - 2][j] == 2 && board[i - 3][j] == 0 && board[i - 4][j] == 2)
-				board_cal[i - 3][j] = board_cal[i - 3][j] - 100;
+				board_cal[i - 3][j] = board_cal[i - 3][j] - 10;
 			if (board[i][j] == 2 && board[i][j - 1] == 2 && board[i][j - 2] == 2 && board[i][j - 3] == 0 && board[i][j - 4] == 2)
-				board_cal[i][j - 3] = board_cal[i][j - 3] - 100;
+				board_cal[i][j - 3] = board_cal[i][j - 3] - 10;
 			if (board[i][j] == 2 && board[i - 1][j - 1] == 2 && board[i - 2][j - 2] == 2 && board[i - 3][j - 3] == 0 && board[i - 4][j - 4] == 2)
-				board_cal[i - 3][j - 3] = board_cal[i - 3][j - 3] - 100;
+				board_cal[i - 3][j - 3] = board_cal[i - 3][j - 3] - 10;
 			if (board[i][j] == 2 && board[i - 1][j + 1] == 2 && board[i - 2][j + 2] == 2 && board[i - 3][j + 3] == 0 && board[i - 4][j + 4] == 2)
-				board_cal[i - 3][j + 3] = board_cal[i - 3][j + 3] - 100;
+				board_cal[i - 3][j + 3] = board_cal[i - 3][j + 3] - 10;
 
 			//v●●●v
 			if (board[i][j] == 0 && board[i + 1][j] == 3 && board[i + 2][j] == 3 && board[i + 3][j] == 3 && board[i + 4][j] == 0) {
-				board_cal[i-1][j] = board_cal[i-1][j] + 70;
-				board_cal[i + 5][j] = board_cal[i + 5][j] + 70;
+				board_cal[i][j] = board_cal[i][j] + 7;
+				board_cal[i + 4][j] = board_cal[i + 4][j] + 7;
 			}
 			if (board[i][j] == 0 && board[i][j + 1] == 3 && board[i][j + 2] == 3 && board[i][j + 3] == 3 && board[i][j + 4] == 0) {
-				board_cal[i][j-1] = board_cal[i][j-1] + 70;
-				board_cal[i ][j+5] = board_cal[i][j+5] + 70;
+				board_cal[i][j] = board_cal[i][j] + 7;
+				board_cal[i ][j+4] = board_cal[i][j+4] + 7;
 			}
 			if (board[i][j] == 0 && board[i + 1][j + 1] == 3 && board[i + 2][j + 2] == 3 && board[i + 3][j + 3] == 3 && board[i + 4][j + 4] == 0) {
-				board_cal[i-1][j-1] = board_cal[i-1][j-1] + 70;
-				board_cal[i + 4][j+4] = board_cal[i + 4][j+4] + 70;
+				board_cal[i][j] = board_cal[i][j] + 7;
+				board_cal[i + 4][j+4] = board_cal[i + 4][j+4] + 7;
 			}
 			if (board[i][j] == 0 && board[i + 1][j - 1] == 3 && board[i + 2][j - 2] == 3 && board[i + 3][j - 3] == 3 && board[i + 4][j - 4] == 0) {
-				board_cal[i-1][j+1] = board_cal[i-1][j+1] + 70;
-				board_cal[i + 5][j-5] = board_cal[i + 5][j-5] + 70;
+				board_cal[i][j] = board_cal[i][j] + 7;
+				board_cal[i + 4][j-4] = board_cal[i + 4][j-4] + 7;
 			}
 			if (board[i][j] == 0 && board[i - 1][j] == 3 && board[i - 2][j] ==3 && board[i - 3][j] == 3 && board[i - 4][j] == 0) {
-				board_cal[i+1][j] = board_cal[i+1][j] + 70;
-				board_cal[i - 5][j] = board_cal[i - 5][j] + 70;
+				board_cal[i][j] = board_cal[i][j] + 7;
+				board_cal[i - 4][j] = board_cal[i - 4][j] + 7;
 			}
 			if (board[i][j] == 0 && board[i][j - 1] == 3 && board[i][j - 2] ==3 && board[i][j - 3] == 3 && board[i][j - 4] == 0) {
-				board_cal[i][j+1] = board_cal[i][j+1] + 70;
-				board_cal[i][j-5] = board_cal[i][j-5] + 70;
+				board_cal[i][j] = board_cal[i][j] + 7;
+				board_cal[i][j-4] = board_cal[i][j-4] + 7;
 			}
 			if (board[i][j] ==0 && board[i - 1][j - 1] == 3 && board[i - 2][j - 2] == 3 && board[i - 3][j - 3] == 3 && board[i - 4][j - 4] == 0) {
-				board_cal[i+1][j+1] = board_cal[i+1][j+1] + 70;
-				board_cal[i -5][j-5] = board_cal[i - 5][j-5] + 70;
+				board_cal[i][j] = board_cal[i][j] + 7;
+				board_cal[i -4][j-4] = board_cal[i - 4][j-4] + 7;
 			}
 			if (board[i][j] == 0 && board[i - 1][j + 1] == 3 && board[i - 2][j + 2] == 3&& board[i - 3][j + 3] == 3 && board[i - 4][j + 4] == 0) {
-				board_cal[i+1][j-1] = board_cal[i+1][j-1] + 70;
-				board_cal[i-5][j+5] = board_cal[i -5][j+5] + 70;
+				board_cal[i][j] = board_cal[i][j] + 7;
+				board_cal[i-4][j+4] = board_cal[i -4][j+4] + 7;
 			}
 
 			//for black
 			if (board[i][j] == 0 && board[i + 1][j] == 2 && board[i + 2][j] == 2&& board[i + 3][j] == 2 && board[i + 4][j] == 0) {
-				board_cal[i-1][j] = board_cal[i-1][j] - 70;
-				board_cal[i + 5][j] = board_cal[i + 5][j] - 70;
+				board_cal[i][j] = board_cal[i][j] - 7;
+				board_cal[i + 4][j] = board_cal[i + 4][j] - 7;
 			}
 			if (board[i][j] == 0 && board[i][j + 1] == 2 && board[i][j + 2] == 2 && board[i][j + 3] == 2&& board[i][j + 4] == 0) {
-				board_cal[i][j-1] = board_cal[i][j-1] - 70;
-				board_cal[i][j + 5] = board_cal[i][j + 5] - 70;
+				board_cal[i][j] = board_cal[i][j] - 7;
+				board_cal[i][j + 4] = board_cal[i][j + 4] - 7;
 			}
 			if (board[i][j] == 0 && board[i + 1][j + 1] == 2 && board[i + 2][j + 2] == 2 && board[i + 3][j + 3] == 2&& board[i + 4][j + 4] == 0) {
-				board_cal[i-1][j-1] = board_cal[i-1][j-1] - 70;
-				board_cal[i + 5][j + 5] = board_cal[i + 5][j + 5] - 70;
+				board_cal[i][j] = board_cal[i][j] - 7;
+				board_cal[i + 4][j + 4] = board_cal[i + 4][j + 4] - 7;
 			}
 			if (board[i][j] == 0 && board[i + 1][j - 1] == 2&& board[i + 2][j - 2] ==2 && board[i + 3][j - 3] == 2 && board[i + 4][j - 4] == 0) {
-				board_cal[i-1][j+1] = board_cal[i-1][j+1] - 70;
-				board_cal[i + 5][j - 5] = board_cal[i + 5][j - 5] - 70;
+				board_cal[i][j] = board_cal[i][j] - 7;
+				board_cal[i + 4][j - 4] = board_cal[i + 4][j - 4] - 7;
 			}
 			if (board[i][j] == 0 && board[i - 1][j] == 2 && board[i - 2][j] == 2 && board[i - 3][j] == 2 && board[i - 4][j] == 0) {
-				board_cal[i+1][j] = board_cal[i+1][j] - 70;
-				board_cal[i - 5][j] = board_cal[i - 5][j] - 70;
+				board_cal[i][j] = board_cal[i][j] - 7;
+				board_cal[i - 4][j] = board_cal[i - 4][j] - 7;
 			}
 			if (board[i][j] == 0 && board[i][j - 1] == 2 && board[i][j - 2] == 2 && board[i][j - 3] ==2 && board[i][j - 4] == 0) {
-				board_cal[i][j+1] = board_cal[i][j+1] - 70;
-				board_cal[i][j - 5] = board_cal[i][j - 5] - 70;
+				board_cal[i][j] = board_cal[i][j] - 7;
+				board_cal[i][j - 4] = board_cal[i][j - 4] - 7;
 			}
 			if (board[i][j] == 0 && board[i - 1][j - 1] == 2&& board[i - 2][j - 2] ==2 && board[i - 3][j - 3] ==2 && board[i - 4][j - 4] == 0) {
-				board_cal[i+1][j+1] = board_cal[i+1][j+1] - 70;
-				board_cal[i - 5][j - 5] = board_cal[i - 5][j - 5] - 70;
+				board_cal[i][j] = board_cal[i][j] - 7;
+				board_cal[i - 4][j - 4] = board_cal[i - 4][j - 4] - 7;
 			}
 			if (board[i][j] == 0 && board[i - 1][j + 1] == 2 && board[i - 2][j + 2] == 2 && board[i - 3][j + 3] == 2 && board[i - 4][j + 4] == 0) {
-				board_cal[i+1][j-1] = board_cal[i+1][j-1] - 70;
-				board_cal[i - 5][j + 5] = board_cal[i - 5][j + 5] - 70;
+				board_cal[i][j] = board_cal[i][j] - 7;
+				board_cal[i - 4][j + 4] = board_cal[i - 4][j + 4] - 7;
 			}
 
 			//●●v●●
 			if (board[i][j] == 3 && board[i + 1][j] == 3 && board[i + 2][j] == 0 && board[i + 3][j] == 3 && board[i + 4][j] == 3)
-				board_cal[i + 2][j] = board_cal[i + 2][j] + 100;
+				board_cal[i + 2][j] = board_cal[i + 2][j] + 10;
 			if (board[i][j] == 3 && board[i][j + 1] == 3 && board[i][j + 2] == 3 && board[i][j + 3] == 0 && board[i][j + 4] == 3)
-				board_cal[i][j + 2] = board_cal[i][j + 2] + 100;
+				board_cal[i][j + 2] = board_cal[i][j + 2] + 10;
 			if (board[i][j] == 3 && board[i + 1][j + 1] == 3 && board[i + 2][j + 2] == 0 && board[i + 3][j + 3] == 3 && board[i + 4][j + 4] == 3)
-				board_cal[i + 2][j + 2] = board_cal[i + 2][j + 2] + 100;
+				board_cal[i + 2][j + 2] = board_cal[i + 2][j + 2] + 10;
 			if (board[i][j] == 3 && board[i + 1][j - 1] == 3 && board[i + 2][j - 2] == 0 && board[i + 3][j - 3] == 3 && board[i + 4][j - 4] == 3)
-				board_cal[i + 2][j - 2] = board_cal[i + 2][j - 2] + 100;
+				board_cal[i + 2][j - 2] = board_cal[i + 2][j - 2] + 10;
 			if (board[i][j] == 3 && board[i - 1][j] == 3 && board[i - 2][j] == 0 && board[i - 3][j] == 3 && board[i - 4][j] == 3)
-				board_cal[i - 2][j] = board_cal[i - 2][j] + 100;
+				board_cal[i - 2][j] = board_cal[i - 2][j] + 10;
 			if (board[i][j] == 3 && board[i][j - 1] == 3 && board[i][j - 2] == 0 && board[i][j - 3] == 3 && board[i][j - 4] == 3)
-				board_cal[i][j - 2] = board_cal[i][j - 2] + 100;
+				board_cal[i][j - 2] = board_cal[i][j - 2] + 10;
 			if (board[i][j] == 3 && board[i - 1][j - 1] == 3 && board[i - 2][j - 2] == 0 && board[i - 3][j - 3] == 3 && board[i - 4][j - 4] == 3)
-				board_cal[i - 2][j - 2] = board_cal[i - 2][j - 2] + 100;
+				board_cal[i - 2][j - 2] = board_cal[i - 2][j - 2] + 10;
 			if (board[i][j] == 3 && board[i - 1][j + 1] == 3 && board[i - 2][j + 2] == 0 && board[i - 3][j + 3] == 3 && board[i - 4][j + 4] == 3)
-				board_cal[i - 2][j + 2] = board_cal[i - 2][j + 2] + 100;
+				board_cal[i - 2][j + 2] = board_cal[i - 2][j + 2] + 10;
 
 			//for black
 			if (board[i][j] == 2 && board[i + 1][j] == 2 && board[i + 2][j] == 0 && board[i + 3][j] == 2 && board[i + 4][j] == 2)
-				board_cal[i + 2][j] = board_cal[i + 2][j] - 100;
+				board_cal[i + 2][j] = board_cal[i + 2][j] - 10;
 			if (board[i][j] == 2 && board[i][j + 1] == 2 && board[i][j + 2] == 2 && board[i][j + 3] == 0 && board[i][j + 4] == 2)
-				board_cal[i][j + 2] = board_cal[i][j + 2] - 100;
+				board_cal[i][j + 2] = board_cal[i][j + 2] - 10;
 			if (board[i][j] == 2 && board[i + 1][j + 1] == 2 && board[i + 2][j + 2] == 0 && board[i + 3][j + 3] == 2 && board[i + 4][j + 4] == 2)
-				board_cal[i + 2][j + 2] = board_cal[i + 2][j + 2] - 100;
+				board_cal[i + 2][j + 2] = board_cal[i + 2][j + 2] - 10;
 			if (board[i][j] == 2 && board[i + 1][j - 1] == 2 && board[i + 2][j - 2] == 0 && board[i + 3][j - 3] == 2 && board[i + 4][j - 4] == 2)
-				board_cal[i + 2][j - 2] = board_cal[i + 2][j - 2] - 100;
+				board_cal[i + 2][j - 2] = board_cal[i + 2][j - 2] - 10;
 			if (board[i][j] == 2 && board[i - 1][j] == 2 && board[i - 2][j] == 0 && board[i - 3][j] == 2 && board[i - 4][j] == 2)
-				board_cal[i - 2][j] = board_cal[i - 2][j] - 100;
+				board_cal[i - 2][j] = board_cal[i - 2][j] - 10;
 			if (board[i][j] == 2 && board[i][j - 1] == 2 && board[i][j - 2] == 0 && board[i][j - 3] == 2 && board[i][j - 4] == 2)
-				board_cal[i][j - 2] = board_cal[i][j - 2] - 100;
+				board_cal[i][j - 2] = board_cal[i][j - 2] - 10;
 			if (board[i][j] == 2 && board[i - 1][j - 1] == 2 && board[i - 2][j - 2] == 0 && board[i - 3][j - 3] == 2 && board[i - 4][j - 4] == 2)
-				board_cal[i - 2][j - 2] = board_cal[i - 2][j - 2] - 100;
+				board_cal[i - 2][j - 2] = board_cal[i - 2][j - 2] - 10;
 			if (board[i][j] == 2 && board[i - 1][j + 1] == 2 && board[i - 2][j + 2] == 0 && board[i - 3][j + 3] == 2 && board[i - 4][j + 4] == 2)
-				board_cal[i - 2][j + 2] = board_cal[i - 2][j + 2] - 100;
+				board_cal[i - 2][j + 2] = board_cal[i - 2][j + 2] - 10;
 		}
 	}
 	for (i = 5; i < N - 5; i++)
@@ -194,75 +194,75 @@ void eval(int(*board_cal)[N], int(*board)[N]) // 해당 노드가 가지고 있는 board의
 		{
 			//○●●●●v
 			if (board[i][j] == 2 && board[i + 1][j] == 3 && board[i + 2][j] == 3 && board[i + 3][j] == 3 && board[i + 4][j] == 3 && board[i + 5][j] == 0)
-				board_cal[i + 5][j] = board_cal[i + 5][j] + 90;
+				board_cal[i + 5][j] = board_cal[i + 5][j] + 9;
 			if (board[i][j] == 2 && board[i][j + 1] == 3 && board[i][j + 2] == 3 && board[i][j + 3] == 3 && board[i][j + 4] == 3 && board[i][j + 5] == 0)
-				board_cal[i + 5][j] = board_cal[i + 5][j] + 90;
+				board_cal[i + 5][j] = board_cal[i + 5][j] + 9;
 			if (board[i][j] == 2 && board[i + 1][j + 1] == 3 && board[i + 2][j + 2] == 3 && board[i + 3][j + 3] == 3 && board[i + 4][j + 4] == 3 && board[i + 5][j + 5] == 0)
-				board_cal[i + 5][j+5] = board_cal[i + 5][j+5] + 90;
+				board_cal[i + 5][j+5] = board_cal[i + 5][j+5] + 9;
 			if (board[i][j] == 2 && board[i + 1][j - 1] == 3 && board[i + 2][j - 2] == 3 && board[i + 3][j - 3] == 3 && board[i + 4][j - 4] == 3 && board[i + 5][j - 5] == 0)
-				board_cal[i + 5][j-5] = board_cal[i + 5][j-5] + 90;
+				board_cal[i + 5][j-5] = board_cal[i + 5][j-5] + 9;
 			if (board[i][j] == 2 && board[i - 1][j] == 3 && board[i - 2][j] == 3 && board[i - 3][j] == 3 && board[i - 4][j] == 3 && board[i - 5][j] == 0)
-				board_cal[i - 5][j] = board_cal[i - 5][j] + 90;
+				board_cal[i - 5][j] = board_cal[i - 5][j] + 9;
 			if (board[i][j] == 2 && board[i][j - 1] == 3 && board[i][j - 2] == 3 && board[i][j - 3] == 3 && board[i][j - 4] == 3 && board[i][j - 5] == 0)
-				board_cal[i][j-5] = board_cal[i][j-5] + 90;
+				board_cal[i][j-5] = board_cal[i][j-5] + 9;
 			if (board[i][j] == 2 && board[i - 1][j - 1] == 3 && board[i - 2][j - 2] == 3 && board[i - 3][j - 3] == 3 && board[i - 4][j - 4] == 3 && board[i - 5][j - 5] == 0)
-				board_cal[i -5][j-5] = board_cal[i - 5][j-5] + 90;
+				board_cal[i -5][j-5] = board_cal[i - 5][j-5] + 9;
 			if (board[i][j] == 2 && board[i - 1][j + 1] == 3 && board[i - 2][j + 2] == 3 && board[i - 3][j + 3] == 3 && board[i - 4][j + 4] == 3 && board[i - 5][j + 5] == 0)
-				board_cal[i - 5][j+5] = board_cal[i -5][j+5] + 90;
+				board_cal[i - 5][j+5] = board_cal[i -5][j+5] + 9;
 			
 			//black
 			if (board[i][j] == 3 && board[i + 1][j] == 2 && board[i + 2][j] == 2 && board[i + 3][j] == 2 && board[i + 4][j] == 2 && board[i + 5][j] == 0)
-				board_cal[i + 5][j] = board_cal[i + 5][j] - 90;
+				board_cal[i + 5][j] = board_cal[i + 5][j] - 9;
 			if (board[i][j] == 3 && board[i][j + 1] == 2 && board[i][j + 2] == 2 && board[i][j + 3] == 2 && board[i][j + 4] == 2 && board[i][j + 5] == 0)
-				board_cal[i + 5][j] = board_cal[i + 5][j] - 90;
+				board_cal[i + 5][j] = board_cal[i + 5][j] - 9;
 			if (board[i][j] == 3 && board[i + 1][j + 1] == 2 && board[i + 2][j + 2] == 2 && board[i + 3][j + 3] == 2 && board[i + 4][j + 4] == 2 && board[i + 5][j + 5] == 0)
-				board_cal[i + 5][j + 5] = board_cal[i + 5][j + 5] - 90;
+				board_cal[i + 5][j + 5] = board_cal[i + 5][j + 5] - 9;
 			if (board[i][j] == 3 && board[i + 1][j - 1] == 2 && board[i + 2][j - 2] == 2 && board[i + 3][j - 3] == 2 && board[i + 4][j - 4] == 2 && board[i + 5][j - 5] == 0)
-				board_cal[i + 5][j - 5] = board_cal[i + 5][j - 5] - 90;
+				board_cal[i + 5][j - 5] = board_cal[i + 5][j - 5] - 9;
 			if (board[i][j] == 3 && board[i - 1][j] == 2 && board[i - 2][j] == 2 && board[i - 3][j] == 2 && board[i - 4][j] == 2 && board[i - 5][j] == 0)
-				board_cal[i - 5][j] = board_cal[i - 5][j] - 90;
+				board_cal[i - 5][j] = board_cal[i - 5][j] - 9;
 			if (board[i][j] == 3 && board[i][j - 1] == 2 && board[i][j - 2] == 2 && board[i][j - 3] == 2 && board[i][j - 4] == 2 && board[i][j - 5] == 0)
-				board_cal[i][j - 5] = board_cal[i][j - 5] - 90;
+				board_cal[i][j - 5] = board_cal[i][j - 5] - 9;
 			if (board[i][j] == 3 && board[i - 1][j - 1] == 2 && board[i - 2][j - 2] == 2 && board[i - 3][j - 3] == 2 && board[i - 4][j - 4] == 2 && board[i - 5][j - 5] == 0)
-				board_cal[i - 5][j - 5] = board_cal[i - 5][j - 5] - 90;
+				board_cal[i - 5][j - 5] = board_cal[i - 5][j - 5] - 9;
 			if (board[i][j] == 3 && board[i - 1][j + 1] == 2 && board[i - 2][j + 2] == 2 && board[i - 3][j + 3] == 2 && board[i - 4][j + 4] == 2 && board[i - 5][j + 5] == 0)
-				board_cal[i - 5][j + 5] = board_cal[i - 5][j + 5] - 90;
+				board_cal[i - 5][j + 5] = board_cal[i - 5][j + 5] - 9;
 
 			//○●●●●v//뒤집어서
 			if (board[i][j] == 0 && board[i + 1][j] == 3 && board[i + 2][j] == 3 && board[i + 3][j] == 3 && board[i + 4][j] == 3 && board[i + 5][j] == 2)
-				board_cal[i][j] = board_cal[i][j] + 90;
+				board_cal[i][j] = board_cal[i][j] + 9;
 			if (board[i][j] == 0 && board[i][j + 1] == 3 && board[i][j + 2] == 3 && board[i][j + 3] == 3 && board[i][j + 4] == 3 && board[i][j + 5] == 2)
-				board_cal[i][j] = board_cal[i][j] + 90;
+				board_cal[i][j] = board_cal[i][j] + 9;
 			if (board[i][j] == 0 && board[i + 1][j + 1] == 3 && board[i + 2][j + 2] == 3 && board[i + 3][j + 3] == 3 && board[i + 4][j + 4] == 3 && board[i + 5][j + 5] == 2)
-				board_cal[i][j] = board_cal[i][j] + 90;
+				board_cal[i][j] = board_cal[i][j] + 9;
 			if (board[i][j] == 0 && board[i + 1][j - 1] == 3 && board[i + 2][j - 2] == 3 && board[i + 3][j - 3] == 3 && board[i + 4][j - 4] == 3 && board[i + 5][j - 5] == 2)
-				board_cal[i][j] = board_cal[i][j] + 90;
+				board_cal[i][j] = board_cal[i][j] + 9;
 			if (board[i][j] == 0 && board[i - 1][j] == 3 && board[i - 2][j] == 3 && board[i - 3][j] == 3 && board[i - 4][j] == 3 && board[i - 5][j] == 2)
-				board_cal[i][j] = board_cal[i][j] + 90;
+				board_cal[i][j] = board_cal[i][j] + 9;
 			if (board[i][j] == 0 && board[i][j - 1] == 3 && board[i][j - 2] == 3 && board[i][j - 3] == 3 && board[i][j - 4] == 3 && board[i][j - 5] == 2)
-				board_cal[i][j] = board_cal[i][j] + 90;
+				board_cal[i][j] = board_cal[i][j] + 9;
 			if (board[i][j] == 0 && board[i - 1][j - 1] == 3 && board[i - 2][j - 2] == 3 && board[i - 3][j - 3] == 3 && board[i - 4][j - 4] == 3 && board[i - 5][j - 5] == 2)
-				board_cal[i][j] = board_cal[i][j] + 90;
+				board_cal[i][j] = board_cal[i][j] + 9;
 			if (board[i][j] == 0 && board[i - 1][j + 1] == 3 && board[i - 2][j + 2] == 3 && board[i - 3][j + 3] == 3 && board[i - 4][j + 4] == 3 && board[i - 5][j + 5] == 2)
-				board_cal[i][j] = board_cal[i][j] + 90;
+				board_cal[i][j] = board_cal[i][j] + 9;
 
 			//black
 			if (board[i][j] == 0 && board[i + 1][j] == 2 && board[i + 2][j] == 2 && board[i + 3][j] == 2 && board[i + 4][j] == 2 && board[i + 5][j] == 3)
-				board_cal[i][j] = board_cal[i][j] - 90;
+				board_cal[i][j] = board_cal[i][j] - 9;
 			if (board[i][j] == 0 && board[i][j + 1] == 2 && board[i][j + 2] == 2 && board[i][j + 3] == 2 && board[i][j + 4] == 2 && board[i][j + 5] == 3)
-				board_cal[i][j] = board_cal[i][j] - 90;
+				board_cal[i][j] = board_cal[i][j] - 9;
 			if (board[i][j] == 0 && board[i + 1][j + 1] == 2 && board[i + 2][j + 2] == 2 && board[i + 3][j + 3] == 2 && board[i + 4][j + 4] == 2 && board[i + 5][j + 5] == 3)
-				board_cal[i][j] = board_cal[i][j] - 90;
+				board_cal[i][j] = board_cal[i][j] - 9;
 			if (board[i][j] == 0 && board[i + 1][j - 1] == 2 && board[i + 2][j - 2] == 2 && board[i + 3][j - 3] == 2 && board[i + 4][j - 4] == 2 && board[i + 5][j - 5] == 3)
-				board_cal[i][j] = board_cal[i][j] - 90;
+				board_cal[i][j] = board_cal[i][j] - 9;
 			if (board[i][j] == 0 && board[i - 1][j] == 2 && board[i - 2][j] == 2 && board[i - 3][j] == 2 && board[i - 4][j] == 2 && board[i - 5][j] == 3)
-				board_cal[i][j] = board_cal[i][j] - 90;
+				board_cal[i][j] = board_cal[i][j] - 9;
 			if (board[i][j] == 0 && board[i][j - 1] == 2 && board[i][j - 2] == 2 && board[i][j - 3] == 2 && board[i][j - 4] == 2 && board[i][j - 5] == 3)
-				board_cal[i][j] = board_cal[i][j] - 90;
+				board_cal[i][j] = board_cal[i][j] - 9;
 			if (board[i][j] == 0 && board[i - 1][j - 1] == 2 && board[i - 2][j - 2] == 2 && board[i - 3][j - 3] == 2 && board[i - 4][j - 4] == 2 && board[i - 5][j - 5] == 3)
-				board_cal[i][j] = board_cal[i][j] - 90;
+				board_cal[i][j] = board_cal[i][j] - 9;
 			if (board[i][j] == 0 && board[i - 1][j + 1] == 2 && board[i - 2][j + 2] == 2 && board[i - 3][j + 3] == 2 && board[i - 4][j + 4] == 2 && board[i - 5][j + 5] == 3)
-				board_cal[i][j] = board_cal[i][j] -90;
+				board_cal[i][j] = board_cal[i][j] -9;
 		}
 	}
 }
