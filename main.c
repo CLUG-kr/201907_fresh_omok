@@ -35,7 +35,7 @@ int main()
 			now = GetTickCount();
 			do {
 				printf("검은색 좌표는? (시간제한 %d초) ->",limit);
-				scanf("%d %d", &x, &y);
+				scanf("%d, %d", &y, &x);
 
 				if (x >= N || y >= N || x < 1 || y < 1)
 				{
@@ -84,7 +84,7 @@ int main()
 			now = GetTickCount();
 			do {
 				printf("흰색 좌표는? (시간제한 %d초) ->",limit);
-				scanf("%d %d", &x, &y);
+				scanf("%d, %d", &y, &x);
 
 				if (x >= N || y >= N || x < 1 || y < 1)
 				{

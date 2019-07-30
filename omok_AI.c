@@ -36,9 +36,9 @@ void calculate(int(*board_cal)[N], int(*board)[N], int color, int x, int y, int 
 					y2 = j;
 				}
 			}
-			printf("%d ", board_cal[i][j]);
+			//printf("%d ", board_cal[i][j]);
 		}
-		printf("\n");
+		//printf("\n");
 	}
 
 	if (temp1 > -(temp2)) {
@@ -59,5 +59,5 @@ void calculate(int(*board_cal)[N], int(*board)[N], int color, int x, int y, int 
 			*ai_y = y2;
 		}
 	}
-	system("pause");
+	//system("pause");
 }
