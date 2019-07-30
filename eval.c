@@ -1688,10 +1688,7 @@ int eval(NODE * node) // 해당 노드가 가지고 있는 board의 가치를 평가하는 함수
 				val2 += 40;
 		}
 	}
-	if (num == WHITE)
 		return val - val2;
-	else if (num == FALSE)
-		return val2 - val;
 }
 
 
