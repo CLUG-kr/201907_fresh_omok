@@ -11,7 +11,7 @@
 #define BLACK 2
 #define WHITE 3
 
-void eval(int(*board_cal)[N], int(*board)[N]);
+void eval(int(*board_cal)[N], int(*board)[N], int x, int y);
 void putStone(int x, int y,int color);
 int blackwinTest();
 int whitewinTest();

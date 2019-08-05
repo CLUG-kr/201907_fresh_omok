@@ -9,7 +9,7 @@ void calculate(int(*board_cal)[N], int(*board)[N], int color, int x, int y, int 
 	int x2 = 0;
 	int y2 = 0;
 	board[x][y] = color; //일단 돌 놓는 곳 좌표부터 찍음 
-	eval(board_cal, board);
+	eval(board_cal, board, x, y);
 	for (i = x - 1; i <= x + 1; i++) {
 		for (j = y - 1; j <= y + 1; j++) {
 			if (board[i][j] == 0 && i >= 1 && j >=1&& i<N &&j<N) {		
@@ -36,9 +36,9 @@ void calculate(int(*board_cal)[N], int(*board)[N], int color, int x, int y, int 
 					y2 = j;
 				}
 			}
-			//printf("%d ", board_cal[i][j]);
+			printf("%d ", board_cal[i][j]);
 		}
-		//printf("\n");
+		printf("\n");
 	}
 
 	if (temp1 > -(temp2)) {
