@@ -108,7 +108,7 @@ int main()
 			
 			if (whitewinTest() == 1)//승리자가 나왔는지 체크.
 			{
-				printf("black wins\n");
+				printf("white wins\n");
 				break;
 			}
 
